@@ -1,0 +1,67 @@
+@charset "utf-8";
+@media screen and (min-width: 1041px) and (max-width: 3000px){
+.header {
+	background-color: #FFF;
+	float: left;
+	height: auto;
+	width: 100%;
+}
+.logo-01 {
+	float: left;
+	height: auto;
+	width: 28%;
+}
+.logo-01 img {
+	height: auto;
+	width: 100%;
+}
+
+.logo-02 {
+	float: left;
+	height: auto;
+	width: 15%;
+	margin-left: 2%;
+	padding-left: 2%;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #CCC;
+}
+.logo-02 img {
+	height: auto;
+	width: 100%;
+}
+
+.l {
+	float: right;
+	height: auto;
+	width: 7%;
+	text-align: right;
+	margin-top: 3.5%;
+	margin-right: 5%;
+}
+.l img {
+	margin-left: 7%;
+	height: auto;
+	width: 40%;
+}
+.box-menu {
+	background-color: #2F3B8A;
+	float: left;
+	height: auto;
+	width: 100%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+.banner {
+	float: left;
+	height: auto;
+	width: 100%;
+}
+.banner-m {
+	float: left;
+	height: auto;
+	width: 100%;
+	display: none;
+}
+}

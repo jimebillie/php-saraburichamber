@@ -1,0 +1,170 @@
+@charset "utf-8";
+@media screen and (max-width: 480px) {
+.footer {
+	float: left;
+	height: auto;
+	width: 100%;
+}
+.partner {
+	float: left;
+	height: auto;
+	width: 100%;
+	background-color: #FFF;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #999;
+	text-align: center;
+}
+.partner img {
+	height: auto;
+	width: 45%;
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+.box-footer-top {
+	background-color: #2E3A88;
+	float: left;
+	height: auto;
+	width: 100%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+
+.box-footer-left {
+	float: left;
+	width: 100%;
+	height: auto;
+}
+.box-footer-center {
+	float: left;
+	height: auto;
+	width: 100%;
+}
+.box-footer-right {
+	float: left;
+	height: auto;
+	width: 100%;
+}
+
+
+.title-footer {
+	font-family: "Noto Sans Thai";
+	font-size: 1.5rem;
+	color: #FFFFFF;
+	margin-bottom: 5%;
+}
+.menu-footer {
+	font-family: "Noto Sans Thai";
+	font-size: 1.2rem;
+	color: #FFF;
+	float: left;
+	height: auto;
+	width: 100%;
+	line-height: 2rem;
+	margin-bottom: 5%;
+}
+.menu-footer a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+.contact-footer-01 {
+	float: left;
+	height: auto;
+	width: 90%;
+	font-family: "Noto Sans Thai";
+	font-size: 1.2rem;
+	color: #FFF;
+	background-image: url(../images/icon-footer-call.jpg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 7%;
+	padding-top: 3%;
+	padding-bottom: 2%;
+	background-size: 5.5%;
+}
+.contact-footer-01 a {
+	color: #FFF;
+	text-decoration: none;
+	
+}
+
+.contact-footer-02 {
+	float: left;
+	height: auto;
+	width: 90%;
+	font-family: "Noto Sans Thai";
+	font-size: 1.2rem;
+	color: #FFF;
+	background-image: url(../images/icon-footer-email.jpg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 7%;
+	padding-top: 3%;
+	padding-bottom: 2%;
+	background-size: 5.5%;
+}
+.contact-footer-03 {
+	float: left;
+	height: auto;
+	width: 90%;
+	font-family: "Noto Sans Thai";
+	font-size: 1.2rem;
+	color: #FFF;
+	background-image: url(../images/icon-footer-address.jpg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 7%;
+	padding-top: 3%;
+	padding-bottom: 2%;
+	background-size: 5.5%;
+	line-height: 2rem;
+	margin-bottom: 5%;
+}
+.icon-footer {
+	float: left;
+	height: auto;
+	width: 100%;
+}
+.icon-footer img {
+	margin-right: 5%;
+	height: auto;
+	width: 7%;
+}
+.copy {
+	font-family: "Noto Sans Thai";
+	color: #FFFFFF;
+	float: left;
+	height: auto;
+	width: 100%;
+	font-size: 1.2rem;
+	text-align: center;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #4050BF;
+}
+.qrcode {
+	float: left;
+	height: auto;
+	width: 40%;
+	margin-top: 2%;
+}
+.qrcode img {
+	height: auto;
+	width: 100%;
+}
+
+
+.icon-bar {
+	position: fixed;
+	float: right;
+	text-align: right;
+	z-index: 9999;
+	right: 30px;
+	bottom: 70px;
+  
+}
+}
