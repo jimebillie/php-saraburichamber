@@ -122,21 +122,24 @@ $db = new \connect();
 				<?php
 				$news = array_reverse(CheckHaveRowDB::slectFrom("news")['data']);
 				for ($i = 0; $i < 2; $i++) {
+					if (!isset($news[$i]['id'])) {
+					} else {
 				?>
-					<div class="box-news-list-home">
-						<div class="picture-news">
-							<a href="news&amp;activity-detail.php?id=<?=$news[$i]['id']?>">
-								<img src="../back-office/images/news/<?= $news[$i]['_img'] ?>" width="425" height="285" />
-							</a>
+						<div class="box-news-list-home">
+							<div class="picture-news">
+								<a href="news&amp;activity-detail.php?id=<?= $news[$i]['id'] ?>">
+									<img src="../back-office/images/news/<?= $news[$i]['_img'] ?>" width="425" height="285" />
+								</a>
+							</div>
+							<div class="title-news"><?= $news[$i]['_nam_th'] ?></div>
+							<div class="text-news">
+								<?= $news[$i]['_desc_th'] ?>
+							</div>
+							<div class="more-01"><a href="news&amp;activity-detail.php?id=<?= $news[$i]['id'] ?>">อ่านต่อ></a></div>
 						</div>
-						<div class="title-news"><?= $news[$i]['_nam_th'] ?></div>
-						<div class="text-news">
-							<?= $news[$i]['_desc_th'] ?>
-						</div>
-						<div class="more-01"><a href="news&amp;activity-detail.php?id=<?=$news[$i]['id']?>">อ่านต่อ></a></div>
-					</div>
 
 				<?php
+					}
 				}
 				?>
 				<div class="more-all-01"><a href="news&amp;activity.php">ดูทั้งหมด</a></div>

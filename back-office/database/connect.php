@@ -8,7 +8,7 @@ class connect
     private $servername = "localhost"; //-> *Chenge
     private $username = "root"; //-> *Chenge
     private $password = ""; //-> *Chenge
-    private $db_name = "billie";
+    private $db_name = "thanikpr_saraburichamber"; //-> *Chenge
     /**
      * func connect
      */

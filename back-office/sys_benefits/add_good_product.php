@@ -83,7 +83,7 @@ try {
             <script>
                 window.history.back();
             </script>
-        <?php
+            <?php
             exit();
         }
     }
@@ -186,10 +186,11 @@ try {
     $to = __DIR__ . "/../images/benefits/good_product/" . $newName; //-> to
     move_uploaded_file($from, $to); //-> move
 
-    CheckHaveRowDB::query("INSERT INTO `benefits_good_product`(`_cover`, `_name`, `_img`, `_desc_1`, `_desc_2`) VALUES (:_cover, :_name, :_img, :_desc_1, :_desc_2) ", [
+    CheckHaveRowDB::query("INSERT INTO `benefits_good_product`(`_cover`, `_name`, `_img`, `_img_logo`,`_desc_1`, `_desc_2`) VALUES (:_cover, :_name, :_img, :_img_logo, :_desc_1, :_desc_2) ", [
         "_cover" => $newName,
         "_name" => $_POST['_name'],
         "_img" => "",
+        "_img_logo" => "",
         "_desc_1" => "",
         "_desc_2" => ""
     ]);

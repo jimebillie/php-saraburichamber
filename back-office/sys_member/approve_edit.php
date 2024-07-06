@@ -77,11 +77,10 @@ class form_registration
             foreach ($data as $k => $v) {
                 if ($k !== "id") {
                     $dataSave[$k] = $v;
-                    $dataSave['approve_status'] = '1';
                     $dataSave['_id'] = $this->_id;
                 }
             }
-            CheckHaveRowDB::query("UPDATE `form_registration` SET `title_name`=:title_name, `full_name`=:full_name, `birthday`=:birthday, `id_card`=:id_card, `name_establishment`=:name_establishment, `number_legal_entity`=:number_legal_entity, `establishment_date`=:establishment_date, `office_phone`=:office_phone, `phone`=:phone, `email`=:email, `website`=:website, `date_pay`=:date_pay, `time_pay`=:time_pay, `total_pay`=:total_pay, `desc_1`=:desc_1, `desc_2`=:desc_2, `approve_status`=:approve_status WHERE `id`=:_id", $dataSave);
+            CheckHaveRowDB::query("UPDATE `form_registration` SET `title_name`=:title_name, `full_name`=:full_name, `birthday`=:birthday, `id_card`=:id_card, `name_establishment`=:name_establishment, `number_legal_entity`=:number_legal_entity, `establishment_date`=:establishment_date, `office_phone`=:office_phone, `phone`=:phone, `email`=:email, `website`=:website, `date_pay`=:date_pay, `time_pay`=:time_pay, `total_pay`=:total_pay, `desc_1`=:desc_1, `desc_2`=:desc_2 WHERE `id`=:_id", $dataSave);
             return 'ok';
         } catch (Exception $e) {
             echo $e->getMessage();

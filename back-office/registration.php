@@ -153,7 +153,7 @@ $db = new \connect();
                                             </button>
                                             <!-- Modal Edit-->
                                             <div class="modal fade" id="edit_modal_<?= $v['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                                                <div class="modal-dialog modal-dialog-scrollable modal-xl">
                                                     <form action="sys_member/approve_edit.php" method="post" enctype="multipart/form-data">
 
                                                         <input type="text" name="id" value="<?= $v['id'] ?>" required hidden>
@@ -406,7 +406,7 @@ $db = new \connect();
                                                                     </div>
                                                                 </div>
                                                                 <div class="my-2"></div>
-                                                                <button class="btn btn-success w-[100%]" type="submit">ยืนยัน</button>
+                                                                <button class="btn btn-success w-[100%]" type="submit">บันทึก</button>
                                                             </div>
                                                         </div>
                                                     </form>
@@ -486,7 +486,7 @@ $db = new \connect();
                                             </button>
                                             <!-- Modal Edit-->
                                             <div class="modal fade" id="edit_modal_<?= $v['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                                                <div class="modal-dialog modal-dialog-scrollable modal-xl">
                                                     <form action="sys_member/approve_edit.php" method="post" enctype="multipart/form-data">
 
                                                         <input type="text" name="id" value="<?= $v['id'] ?>" required hidden>
@@ -740,7 +740,7 @@ $db = new \connect();
                                                                     </div>
                                                                 </div>
                                                                 <div class="my-2"></div>
-                                                                <button class="btn btn-success w-[100%]" type="submit">ยืนยัน</button>
+                                                                <button class="btn btn-success w-[100%]" type="submit">บันทึก</button>
                                                             </div>
                                                         </div>
                                                     </form>
