@@ -19,7 +19,7 @@ try {
         if (file_exists($formDel)) {
             unlink($formDel); //-> unlink
         }
-        $newName = $_SERVER["UNIQUE_ID"] . "." . explode(".", $_FILES['img']['name'])[count(explode(".", $_FILES['img']['name'])) - 1]; //-> newname
+        $newName = uniqid().uniqid() . "." . explode(".", $_FILES['img']['name'])[count(explode(".", $_FILES['img']['name'])) - 1]; //-> newname
         $from = $_FILES['img']['tmp_name']; //-> from
         $to = __DIR__ . "/../images/aboutus/structure/" . $newName; //-> to
         move_uploaded_file($from, $to); //-> move

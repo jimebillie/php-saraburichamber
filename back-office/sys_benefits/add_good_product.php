@@ -24,7 +24,7 @@ try {
                 if (file_exists(__DIR__ . "/../images/benefits/good_product/" . CheckHaveRowDB::slectFrom('benefits_good_product', $_POST['id'])["data"][0]["_cover"])) {
                     unlink(__DIR__ . "/../images/benefits/good_product/" . CheckHaveRowDB::slectFrom('benefits_good_product', $_POST['id'])["data"][0]["_cover"]);
                 }
-                $newName = $_SERVER["UNIQUE_ID"] . "." . explode(".", $_FILES['_cover']['name'])[count(explode(".", $_FILES['_cover']['name'])) - 1]; //-> newname
+                $newName = uniqid().uniqid() . "." . explode(".", $_FILES['_cover']['name'])[count(explode(".", $_FILES['_cover']['name'])) - 1]; //-> newname
                 $from = $_FILES['_cover']['tmp_name']; //-> from
                 $to = __DIR__ . "/../images/benefits/good_product/" . $newName; //-> to
                 move_uploaded_file($from, $to); //-> move
@@ -69,7 +69,7 @@ try {
                 if (file_exists(__DIR__ . "/../images/benefits/good_product/" . CheckHaveRowDB::slectFrom('benefits_good_product', $_POST['id'])["data"][0]["_img_logo"])) {
                     unlink(__DIR__ . "/../images/benefits/good_product/" . CheckHaveRowDB::slectFrom('benefits_good_product', $_POST['id'])["data"][0]["_img_logo"]);
                 }
-                $newName = $_SERVER["UNIQUE_ID"] . "." . explode(".", $_FILES['_img_logo']['name'])[count(explode(".", $_FILES['_img_logo']['name'])) - 1]; //-> newname
+                $newName = uniqid().uniqid() . "." . explode(".", $_FILES['_img_logo']['name'])[count(explode(".", $_FILES['_img_logo']['name'])) - 1]; //-> newname
                 $from = $_FILES['_img_logo']['tmp_name']; //-> from
                 $to = __DIR__ . "/../images/benefits/good_product/" . $newName; //-> to
                 move_uploaded_file($from, $to); //-> move
@@ -107,7 +107,7 @@ try {
                 if (file_exists(__DIR__ . "/../images/benefits/good_product/" . CheckHaveRowDB::slectFrom('benefits_good_product', $_POST['id'])["data"][0]["_img"])) {
                     unlink(__DIR__ . "/../images/benefits/good_product/" . CheckHaveRowDB::slectFrom('benefits_good_product', $_POST['id'])["data"][0]["_img"]);
                 }
-                $newName = $_SERVER["UNIQUE_ID"] . "." . explode(".", $_FILES['_img']['name'])[count(explode(".", $_FILES['_img']['name'])) - 1]; //-> newname
+                $newName = uniqid().uniqid() . "." . explode(".", $_FILES['_img']['name'])[count(explode(".", $_FILES['_img']['name'])) - 1]; //-> newname
                 $from = $_FILES['_img']['tmp_name']; //-> from
                 $to = __DIR__ . "/../images/benefits/good_product/" . $newName; //-> to
                 move_uploaded_file($from, $to); //-> move
@@ -181,7 +181,7 @@ try {
         exit();
     }
 
-    $newName = $_SERVER["UNIQUE_ID"] . "." . explode(".", $_FILES['_cover']['name'])[count(explode(".", $_FILES['_cover']['name'])) - 1]; //-> newname
+    $newName = uniqid().uniqid() . "." . explode(".", $_FILES['_cover']['name'])[count(explode(".", $_FILES['_cover']['name'])) - 1]; //-> newname
     $from = $_FILES['_cover']['tmp_name']; //-> from
     $to = __DIR__ . "/../images/benefits/good_product/" . $newName; //-> to
     move_uploaded_file($from, $to); //-> move

@@ -22,7 +22,7 @@ if ($type_file[0] !== "image") {
      * Make new name file.
      */
     $file_extension = "." . explode(".", $file["name"])[count(explode(".", $file["name"])) - 1];
-    $newName = $_SERVER["UNIQUE_ID"] . "-slide-id-" . $_POST['id'] . $file_extension;
+    $newName = uniqid().uniqid() . "-slide-id-" . $_POST['id'] . $file_extension;
     /**
      * Move file upload
      */

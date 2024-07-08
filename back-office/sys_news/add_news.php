@@ -30,7 +30,7 @@ if (isset($_POST['edit']) && $_POST['edit'] === "_main") {
             exit();
         }
 
-        $_newName = $_SERVER['UNIQUE_ID'] . "." . explode(".", $file["name"])[count(explode('.', $file['name'])) - 1];
+        $_newName = uniqid().uniqid() . "." . explode(".", $file["name"])[count(explode('.', $file['name'])) - 1];
         $_from = $file['tmp_name'];
         $_to = __DIR__ . "/../images/news/" . $_newName;
         move_uploaded_file($_from, $_to);
@@ -121,7 +121,7 @@ if (explode("/", $file['type'])[0] !== "image") {
 
 
 
-$_newName = $_SERVER['UNIQUE_ID'] . "." . explode(".", $file["name"])[count(explode('.', $file['name'])) - 1];
+$_newName = uniqid().uniqid() . "." . explode(".", $file["name"])[count(explode('.', $file['name'])) - 1];
 $_from = $file['tmp_name'];
 $_to = __DIR__ . "/../images/news/" . $_newName;
 move_uploaded_file($_from, $_to);

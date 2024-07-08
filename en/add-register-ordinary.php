@@ -27,27 +27,27 @@ try {
     }
 
     if ($_FILES['id_card_file']['name'] !== "") {
-        move_uploaded_file($_FILES['id_card_file']['tmp_name'], __DIR__ . "/../back-office/images/member/" . $_SERVER["UNIQUE_ID"] . "-" . $_FILES['id_card_file']['name']);
-        $data['id_card_file'] = $_SERVER["UNIQUE_ID"] . "-" . $_FILES['id_card_file']['name'];
+        move_uploaded_file($_FILES['id_card_file']['tmp_name'], __DIR__ . "/../back-office/images/member/" . uniqid().uniqid() . "-" . $_FILES['id_card_file']['name']);
+        $data['id_card_file'] = uniqid().uniqid() . "-" . $_FILES['id_card_file']['name'];
     } else {
         $data['id_card_file'] = NULL;
     }
     if ($_FILES['number_house_file']['name'] !== "") {
-        move_uploaded_file($_FILES['number_house_file']['tmp_name'], __DIR__ . "/../back-office/images/member/" . $_SERVER["UNIQUE_ID"] . "-" . $_FILES['number_house_file']['name']);
-        $data['number_house_file'] = $_SERVER["UNIQUE_ID"] . "-" . $_FILES['number_house_file']['name'];
+        move_uploaded_file($_FILES['number_house_file']['tmp_name'], __DIR__ . "/../back-office/images/member/" . uniqid().uniqid() . "-" . $_FILES['number_house_file']['name']);
+        $data['number_house_file'] = uniqid().uniqid() . "-" . $_FILES['number_house_file']['name'];
     } else {
         $data['number_house_file'] = NULL;
     }
     if ($_FILES['proof_of_payment_file']['name'] !== "") {
-        move_uploaded_file($_FILES['proof_of_payment_file']['tmp_name'], __DIR__ . "/../back-office/images/member/" . $_SERVER["UNIQUE_ID"] . "-" . $_FILES['proof_of_payment_file']['name']);
-        $data['proof_of_payment_file'] = $_SERVER["UNIQUE_ID"] . "-" . $_FILES['proof_of_payment_file']['name'];
+        move_uploaded_file($_FILES['proof_of_payment_file']['tmp_name'], __DIR__ . "/../back-office/images/member/" . uniqid().uniqid() . "-" . $_FILES['proof_of_payment_file']['name']);
+        $data['proof_of_payment_file'] = uniqid().uniqid() . "-" . $_FILES['proof_of_payment_file']['name'];
     } else {
         $data['proof_of_payment_file'] = NULL;
     }
     if (isset($_FILES['commercial_registration_file'])) {
         if ($_FILES['commercial_registration_file']['name'] !== "") {
-            move_uploaded_file($_FILES['commercial_registration_file']['tmp_name'], __DIR__ . "/../back-office/images/member/" . $_SERVER["UNIQUE_ID"] . "-" . $_FILES['commercial_registration_file']['name']);
-            $data['commercial_registration_file'] = $_SERVER["UNIQUE_ID"] . "-" . $_FILES['commercial_registration_file']['name'];
+            move_uploaded_file($_FILES['commercial_registration_file']['tmp_name'], __DIR__ . "/../back-office/images/member/" . uniqid().uniqid() . "-" . $_FILES['commercial_registration_file']['name']);
+            $data['commercial_registration_file'] = uniqid().uniqid() . "-" . $_FILES['commercial_registration_file']['name'];
         } else {
             $data['commercial_registration_file'] = NULL;
         }

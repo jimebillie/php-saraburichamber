@@ -15,7 +15,7 @@ try {
                 throw new Exception("โปรดใช้ไฟล์รูปภาพเท่านั้น");
             }
 
-            $newName = $_SERVER["UNIQUE_ID"] . "." . explode(".", $_FILES['__img']['name'])[count(explode(".", $_FILES['__img']['name'])) - 1]; //-> newname
+            $newName = uniqid().uniqid() . "." . explode(".", $_FILES['__img']['name'])[count(explode(".", $_FILES['__img']['name'])) - 1]; //-> newname
             $from = $_FILES['__img']['tmp_name']; //-> from
             $to = __DIR__ . "/../images/benefits/pn1/" . $newName; //-> to
             move_uploaded_file($from, $to); //-> move
@@ -45,7 +45,7 @@ try {
             if (file_exists($formDel)) {
                 unlink($formDel); //-> unlink
             }
-            $newName = $_SERVER["UNIQUE_ID"] . "." . explode(".", $_FILES['__img']['name'])[count(explode(".", $_FILES['__img']['name'])) - 1]; //-> newname
+            $newName = uniqid().uniqid() . "." . explode(".", $_FILES['__img']['name'])[count(explode(".", $_FILES['__img']['name'])) - 1]; //-> newname
             $from = $_FILES['__img']['tmp_name']; //-> from
             $to = __DIR__ . "/../images/benefits/pn1/" . $newName; //-> to
             move_uploaded_file($from, $to); //-> move

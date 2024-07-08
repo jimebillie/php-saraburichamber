@@ -68,7 +68,7 @@ class form_registration
     {
         $this->_id = $_POST['id'];
         $this->_folder_file = __DIR__ . "/../images/member/";
-        $this->_unique_id = $_SERVER['UNIQUE_ID'];
+        $this->_unique_id = uniqid().uniqid();
     }
     function save_post($data)
     {

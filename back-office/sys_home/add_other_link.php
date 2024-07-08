@@ -14,13 +14,13 @@ try {
         throw new Exception("โปรดใช้ไฟล์รูปภาพเท่านั้น");
     }
 
-    $newName = $_SERVER["UNIQUE_ID"] . "." . explode(".", $_FILES['img']['name'])[count(explode(".", $_FILES['img']['name'])) - 1]; //-> newname
-    $from = $_FILES['img']['tmp_name']; //-> from
-    $to = __DIR__ . "/../images/home/home_link/" . $newName; //-> to
-    move_uploaded_file($from, $to);
+    $_newName = uniqid().uniqid() . "." . explode(".", $_FILES['img']['name'])[count(explode(".", $_FILES['img']['name'])) - 1]; //-> newname
+    $_from = $_FILES['img']['tmp_name']; //-> from
+    $_to = __DIR__ . "/../images/home/home_link/" . $_newName; //-> to
+    move_uploaded_file($_from, $_to);
     $db = CheckHaveRowDB::query("INSERT INTO `home_other_link`(`link`, `img`) VALUES (:__link, :__img)", [
         "__link" => $_POST['link'],
-        "__img" => $newName
+        "__img" => $_newName
     ]);
     header("Location: ../home_other_link.php");
     exit();

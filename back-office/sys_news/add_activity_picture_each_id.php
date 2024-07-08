@@ -23,7 +23,7 @@ for ($k = 0; $k < count($_FILES['pc']['name']); $k++) {
      * Make new name file.
      */
     $file_extension = "." . explode(".", $_FILES['pc']["name"][$k])[count(explode(".", $_FILES['pc']["name"][$k])) - 1];
-    $newName = $_SERVER['UNIQUE_ID'] . "-activity-" . $k . $file_extension;
+    $newName = uniqid().uniqid() . "-activity-" . $k . $file_extension;
     /**
      * Move file upload
      */
