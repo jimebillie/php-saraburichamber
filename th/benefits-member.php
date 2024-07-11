@@ -52,10 +52,12 @@ $db = new \connect();
           $stmt = $db->conn->prepare("SELECT * FROM `form_registration` WHERE `approve_status`='1'");
           $stmt->execute();
           foreach ($stmt->fetchAll() as $k_count => $v_count) {
+            if (CheckHaveRowDB::slectFrom("register_show_list", $v_count['id'], "id_main")["rows"] === 1) {
           ?>
-            <div class="picture-benefits-member"> <a href="member.php?id=<?= $v_count['id'] ?>"><img src="../back-office/images/member/<?= $v_count['logo'] ?>" width="260" height="160" /></a>
-            </div>
+              <div class="picture-benefits-member"> <a href="member.php?id=<?= $v_count['id'] ?>"><img src="../back-office/images/member/<?= $v_count['logo'] ?>" width="260" height="160" /></a>
+              </div>
           <?php
+            }
           }
           ?>
 
